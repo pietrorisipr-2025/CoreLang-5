@@ -1,0 +1,15 @@
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- Avoid committing large artifacts (use GitHub Releases instead) ---
+*.zip
+artifacts/
