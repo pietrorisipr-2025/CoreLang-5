@@ -1,0 +1,33 @@
+{
+  "messages": [
+    {
+      "chain": "ETH",
+      "from": "0xAlice",
+      "to": "0xBridge",
+      "payload": {
+        "op": "lock",
+        "asset": "USDC",
+        "amount": "100"
+      }
+    },
+    {
+      "chain": "SOL",
+      "from": "SoAlice",
+      "to": "SoBridge",
+      "payload": {
+        "op": "mint",
+        "asset": "wUSDC",
+        "amount": "100"
+      }
+    },
+    {
+      "chain": "BTC",
+      "from": "bc1Alice",
+      "to": "bc1Monitor",
+      "payload": {
+        "op": "proof",
+        "txid": "0123deadbeef"
+      }
+    }
+  ]
+}

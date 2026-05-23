@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CoreLang Manifest v1.1",
+  "type": "object",
+  "required": [
+    "version",
+    "release_id",
+    "profiles",
+    "compression_policy",
+    "files"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "enum": [
+        "1.1"
+      ]
+    },
+    "release_id": {
+      "type": "string"
+    },
+    "profiles": {
+      "type": "array"
+    },
+    "compression_policy": {
+      "type": "object"
+    },
+    "files": {
+      "type": "array"
+    },
+    "hints": {
+      "type": "object"
+    }
+  }
+}

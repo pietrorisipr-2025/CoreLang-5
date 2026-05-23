@@ -1,0 +1,66 @@
+{
+  "version": "1.1",
+  "release_id": "cl5_r23_pp_v0_2",
+  "profiles": [
+    {
+      "name": "rtt_10",
+      "rtt_ms": 10,
+      "recommendations": {
+        "shard_kib": 512,
+        "concurrency_k": 32,
+        "http3_streams": 32,
+        "energy_mode": "turbo"
+      }
+    },
+    {
+      "name": "rtt_100",
+      "rtt_ms": 100,
+      "recommendations": {
+        "shard_kib": 256,
+        "concurrency_k": 64,
+        "http3_streams": 64,
+        "energy_mode": "turbo"
+      }
+    },
+    {
+      "name": "rtt_250",
+      "rtt_ms": 250,
+      "recommendations": {
+        "shard_kib": 256,
+        "concurrency_k": 32,
+        "http3_streams": 32,
+        "energy_mode": "eco"
+      }
+    }
+  ],
+  "compression_policy": {
+    "zstd_level": 9,
+    "rules": [
+      {
+        "ext": ".json",
+        "mode": "on"
+      },
+      {
+        "ext": ".csv",
+        "mode": "on"
+      },
+      {
+        "ext": ".zip",
+        "mode": "off"
+      },
+      {
+        "ext": ".cl5b",
+        "mode": "dict_light"
+      }
+    ]
+  },
+  "hints": {
+    "quic_streams_hint": 64,
+    "priority_pareto": [
+      "Block10",
+      "Block4",
+      "Block1"
+    ]
+  },
+  "files": []
+}
